@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <title>asSWFbit Library - a ActionScript based SWF Decompiler / Compiler</title>
+  <base href="http://flash.area-network.de/projekte/asswfbit_library/en/">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/articel.css">
+  <style>body {background: #fff};</style>
+  <meta name="description" content="Documentation to asSWFbit Library - a ActionScript based SWF Decompiler / Compiler">
+  <!-- MetaHead -->
+ </head>
+ <body>
+   <!-- Seiten Inhalt -->
+   <div id="content-body">
+    <h2>asSWFbit Library - a ActionScript based SWF Decompiler / Compiler</h2>
+    <div id="article-info">ActionScript 3 / Last updating <i>07.07.2010</i></div>
+    <div id="article">
+     <p>
+      <b>asSWFbit_Library</b> is a ActionScript based SWF Decompiler / Compiler for SWF files.<br>
+      The library should help you to check, test and manipulate SWF files in any way you wanted.<br>
+      The idea behind asSWFbit is to make it possible to provide a way fix small errors in a SWF file without needing a flash editor or the FLA files.<br>
+      I hope you understand you should this only do for your own SWF files !<br>
+     </p>
+     <p class="hinweis">
+      Please keep in Mind that English is not my native language, so I try my best to make a clear documentation in English.<br>
+      When you find errors or something like that, please send me a short email what I can change or which part is mistakable.<br>
+     </p>
+     <a name="content"></a><h2>Content</h2>
+     <div class="links">
+      <p><a href="#roadmap">Road map</a></p>
+      <p><a href="#manifestations">Manifestations about the asSWFbit Library</a></p>
+      <p><a href="#download">Download the asSWFbit Library</a></p>
+	  <p><a href="#erros_improvments_support">Errors, Improvements and Support</a></p>
+      <p><a href="#install">Installation of the asSWFbit Library</a></p>
+      <p><a href="#read_examples">Read Examples</a></p> 
+      <p><a href="#overview_asswfbit_library">Overview about asSWFbit Library</a></p>
+      <p><a href="#constructor">Constructor</a></p>
+      <p><a href="#methods">Method</a></p>
+      <p><a href="#objects">Objects</a></p>
+     </div>
+     <div class="overview_name">
+      <a name="roadmap"></a><a href="#content" class="overview_back"></a>
+      <h2>Road map</h2>
+     </div>
+     <p>
+      This is only a small Road map for the asSWFbit Library. Because I do this in my free time I will make no promise for any time lines or any other ETA for parts of the project.<br>
+     </p>
+     <h3>Read Support (planned 2010)</h3>
+     <div>
+      <ul>
+       <li class="linethrough">SWF Header Information (Signature, Version, FileLength, Width, Height, FrameRate, FrameCount)</li>
+       <li class="linethrough">FileAttributes (UseDirectBlit, UseGPU, HasMetadata, ActionScript3, UseNetwork)</li>
+       <li class="linethrough">MetaData (CreatorTool, CreateDate, MetadataDate, ModifyDate, RAW)</li>
+       <li class="linethrough">BackgroundColor</li>
+       <li class="linethrough">ScriptLimits</li>
+       <li>...</li>
+       <li>ActionScript Parser</li>
+      </ul>
+     </div>
+     <h3>Modify Support (planned end 2010)</h3>
+     <div>
+      <ul>
+       <li>SWF Header</li>
+       <li>FileAttributes</li>
+       <li>MetaData</li>
+       <li>...</li>
+       <li>ActionScript</li>
+      </ul>
+     </div>
+     <h3>Write Support (planned 2011)</h3>
+     <div>
+      <ul>
+       <li>SWF Header</li>
+       <li>FileAttributes</li>
+       <li>MetaData</li>
+       <li>...</li>
+       <li>ActionScript</li>
+      </ul>
+     </div>
+     <p class="hinweis">
+      All items which are <span class="linethrough">line-through</span> are already implemented in the lasted version.<br>
+      Other items are planned but not released in any version yet.<br>
+     </p>
+     <div class="overview_name">
+      <a name="manifestations"></a><a href="#content" class="overview_back"></a>
+      <h2>Manifestations about asSWFbit</h2>
+     </div>
+     <p>
+      The License for asSWFbit is the <a href="http://www.opensource.org/licenses/bsd-license.php" onclick="window.open(this.href);return false;"> BSD License</a>, the License for the examples / documentation is the <a href="http://creativecommons.org/licenses/by-sa/2.0/de/" onclick="window.open(this.href);return false;"> Creative Commons (by-sa) License</a>.
+      Please also check <a href="http://code.google.com/p/asswfbit/"> http://code.google.com/p/asswfbit/</a> for more Information's.<br>
+     </p>
+     <div class="overview_name">
+      <a name="download"></a><a href="#content" class="overview_back"></a>
+      <h2>Download from asSWFbit 0.2</h2>
+     </div>
+     <p>
+      <b>asSWFbit</b> is hosted on Google Code on this page you can download the lasted version of asSWFbit and submit errors and improvements.<br>  
+     </p>
+     <div class="links">
+      <p><a href="http://code.google.com/p/asswfbit/">http://code.google.com/p/asswfbit/</a></p>
+     </div>
+     <div class="overview_name">
+      <a name="erros_improvments_support"></a><a href="#content" class="overview_back"></a>
+      <h2>Errors, Improvements and Support</h2>
+     </div>
+	 <p>
+	  First of all there is no direct Support for this project, please understand I do this in my free time and it takes a lot of time to write such a documentation.<br>
+	  So I have no time or the resources to answer direct support requests. Support requests to the contact email of the web page will be ignore and not answered.<br>
+	  When you find Errors or have a idea of a improvement, please submit these over the Google Code web page <a href="http://code.google.com/p/asswfbit/"> http://code.google.com/p/asswfbit/</a>.<br>
+	 </p>
+     <div class="overview_name">  
+      <a name="install"></a><a href="#content" class="overview_back"></a>
+      <h2>Installation from asSWFbit Library</h2>
+     </div>
+     <p>
+      <b>asSWFbit Library 0.2</b> is available as package, copy the corresponding package folder "de" to the same place as the FLA file.<br>
+     </p>
+     <p class="screenshot"><img src="../package-and-fla-same-folder.png" width="695" height="345" alt=""></p>
+     <div class="overview_name">
+      <a name="read_examples"></a><a href="#content" class="overview_back"></a>
+      <h2>Read Examples</h2>
+     </div>
+     <p>
+      This examples shows how you can load and parse a flash file with the asSWFbit library.<br>
+      The FLAs for these examples are also include in the example folder of the asSWFbit library.<br>
+     </p>
+     <h3>Read SWF Header Information</h3>
+     <p>
+      The asSWFbit library has the option only to parse and read the SWF Header of a flash file.<br>
+      When you only need these Information you should include the switch for a faster parsing of the SWF file.<br>
+      The SWF Header include the following Information:
+     </p>
+     <ul>
+      <li>Signature (FWS or CWS)</li>
+      <li>Flash Version</li>
+      <li>Uncompress file length</li>
+      <li>Frame size (Dimension)</li>
+      <li>Frame rate (Frames per seconds)</li>
+      <li>Frame Count (Number of Frames)</li>
+     </ul>
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library("Headers"); // Set Mode to Header only (faster)
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information to text fields */
+if (SWF_data.parse(file)) {
+    txt_signature.text   = SWF_data.infos.Header.Signature;
+    txt_compress.text    = SWF_data.infos.Header.Compress;
+    txt_version.text     = SWF_data.infos.Header.Version;
+    txt_filelength.text  = SWF_data.infos.Header.FileLength;
+    txt_width.text       = SWF_data.infos.Header.Width;
+    txt_height.text      = SWF_data.infos.Header.Height;
+    txt_framerate.text   = SWF_data.infos.Header.FrameRate;
+    txt_framecount.text  = SWF_data.infos.Header.FrameCount;
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      In this example you see it is very easy to check for a valid SWF file and read out the SWF Header Information of this SWF file.<br>
+      The Library can be used on any ByteArray which has loaded a SWF file, so you can also use the URLLoader or the FileReference Object to load a SWF file into a ByteArray.<br>
+     </p>
+     <h3>Read FileAttributes</h3>
+     <p>
+      Beside the Header Information there are some more Information which can be read out for more Information.<br>
+      FileAttributes are available for flash files of version 8 and above.<br>
+      So when the flash version is 7 and below you will not see any FileAttributes.<br>
+      The FileAttributes include the following information:<br>
+     </p>
+     <ul>
+      <li>UseDirectBlit (Hardware Acceleration)</li>
+      <li>UseGPU (Graphic Card Acceleration)</li>
+      <li>HasMetadata (Metadata)</li>
+      <li>ActionScript3 (Define if the file use ActionScript 3)</li>
+      <li>UseNetwork (Local Sandbox Setting)</li>
+     </ul> 
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library();
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information to text fields */
+if (SWF_data.parse(file)) {
+    ...
+    if (SWF_data.infos.Header.Version >= 8) { // Exists only in flash files version 8 or higher 
+        txt_usedirectblit.text = SWF_data.infos.FileAttributes.UseDirectBlit;
+        txt_usegpu.text        = SWF_data.infos.FileAttributes.UseGPU;
+        txt_hasmetadata.text   = SWF_data.infos.FileAttributes.HasMetadata;
+        txt_actionscript3.text = SWF_data.infos.FileAttributes.ActionScript3;
+        txt_usenetwork.text    = SWF_data.infos.FileAttributes.UseNetwork;
+    }
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      Here we use first the SWF Header Information to check if the flash file is version 8 or higher.<br>
+      When yes we can read out and display the FileAttributes Information.<br>
+     </p>
+     <h3>Read Metadata</h3>
+     <p>
+      The Metadata are sometime very helpfully. They can include a lot of Information. You can also define to include your own Information.<br>
+      The asSWFbit Library parse some of the values automatically, but you have still access to the full raw xml information.<br>
+      The most common / default information are the following:<br>
+     </p>
+     <ul>
+      <li>CreatorTool</li>
+      <li>ModifyDate</li>
+      <li>CreateDate</li>
+      <li>Author / Creator</li>
+      <li>Description</li>
+     </ul> 
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+       <div class="beispiel-code-lang">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library();
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information to text fields */
+if (SWF_data.parse(file)) {
+    ...
+    if (SWF_data.infos.Header.Version >= 8) { // Exists only in flash files version 8 or higher 
+        ...
+        if (SWF_data.infos.FileAttributes.HasMetadata) { // FileAttributes tell us if there are Metadata
+            txt_creatortool.text  = SWF_data.infos.Metadata.Description.xmp.CreatorTool;
+            txt_metadatadate.text = SWF_data.infos.Metadata.Description.xmp.MetadataDate;
+            txt_modifydate.text   = SWF_data.infos.Metadata.Description.xmp.ModifyDate;
+            txt_createdate.text   = SWF_data.infos.Metadata.Description.xmp.CreateDate;
+            txt_creator.text      = SWF_data.infos.Metadata.Description.dc.creator;
+            txt_description.text  = SWF_data.infos.Metadata.Description.dc.description;
+            txt_title.text        = SWF_data.infos.Metadata.Description.dc.title;
+            txt_metadata.text     = SWF_data.infos.Metadata.raw;
+        }
+    }
+}
+</code>
+       </div>
+      </div>
+     </div>
+     <p class="hinweis">
+      Here you see that most of the xmp entry's and dc entry's are already parsed to a variable for a easy access.<br>
+      The raw xml data are stored in "infos.Metedata.raw". Please keep in mind that this xml is working with namespace, so you need to defined namespace variables to access the different information in the raw data.<br>
+     </p>
+     <h3>Read BackgroundColor and ScriptLimits</h3>
+     <p>
+      The BackgroundColor and ScriptLimits are sometime very intresting information. Please keep in mind that the SWF will only store ScriptLimits when there are different from the default Settings.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library();
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information to text fields */
+if (SWF_data.parse(file)) {
+    ...
+    if (SWF_data.infos.BackgroundColor) {
+        txt_backgroundcolor.text = SWF_data.infos.BackgroundColor;
+    }
+    if (SWF_data.infos.ScriptLimits) {
+        txt_maxrecursiondepth.text    = SWF_data.infos.ScriptLimits.MaxRecursionDepth;
+        txt_scripttimeoutseconds.text = SWF_data.infos.ScriptLimits.ScriptTimeoutSeconds;
+    }
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      The format of the BackgroundColor is in the RGB (Red Green Blue) Format: <span style="color:red">RR</span><span style="color:green">GG</span><span style="color:blue">BB</span>.
+     </p>
+     <h3>Read all TAGs</h3>
+     <p>
+      You can also read all TAGs of a SWF file to search for a special TAG or to get a general Overview over the SWF itself.<br>
+      It is possible to access the raw content of each TAG, the parsed content is only available when the asSWFbit Library support the TAG.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+       <div class="beispiel-code-lang">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library();
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information to text fields */
+if (SWF_data.parse(file)) {
+    ...
+    if (SWF_data.infos.TAGs) {
+        txt_tags.text = "Found " + SWF_data.infos.TAGs.NumberOfTAGs + " TAGs...\n=========================================\n";
+        for (var id:uint = 0; id <  SWF_data.infos.TAGs.NumberOfTAGs; id++) {
+             if (SWF_data.infos.TAGs["ID" + id]) {
+                 txt_tags.appendText(id+'\t:\t' + SWF_data.infos.TAGs["ID" + id].name + " (size: " + SWF_data.infos.TAGs["ID" + id].size + ")\n");
+             }
+        }
+    }
+}
+</code>
+       </div>
+      </div>
+     </div>
+     <p class="hinweis">
+      All TAGs from a SWF file are stored at infos.TAGs, so when this is existing then you can be sure that the SWF file has some TAGs inside.<br>
+      Each TAG has a unique ID over which you can access additional information. For more Information about the structure of this, please look at the "TAGs" section.<br>
+     </p>
+     <div class="overview_name">
+      <a name="overview_asswfbit_library"></a><a href="#content" class="overview_back"></a>
+      <h2>Overview over asSWFbit Library</h2>
+     </div>
+     <p>
+      This is a detail overview, which show all functions, events and constructors of the asSWFbit Library.<br>
+      Below this there are more details information for each function, event and constructor.<br>
+     </p>
+     <h3>Overview over constructors</h3>
+     <div class="overview">
+      <table class="overview_table">
+       <tr>
+        <th>Syntax</th><th>Description</th>
+       </tr>
+       <tr>
+        <td><code>asSWFbit_Library(Mode:String)</code></td><td>Create a asSWFbit_Library-Object. With the mode you can disable or enable additional features.<br>"Headers" will only parse the Header Information and no additional TAGs or Information.</td>
+       </tr>
+      </table>
+     </div>
+     <h3>Overview over functions</h3>
+     <div class="overview">
+      <table class="overview_table">
+       <tr>
+        <th>Syntax</th><th>Description</th>
+       </tr>
+       <tr>
+        <td><code>parse(_DATA_:ByteArray) : Boolean</code></td><td>Try to load and parse the SWF file inside the ByteArray. Return true when there is a valid SWF file inside this ByteArray.</td>
+       </tr>
+      </table>
+     </div>
+     <h3>Overview over "infos" objects</h3>
+     <p>
+      The "infos" object is only available after parsing over the "parse" function and keep all Information about the SWF file.<br>
+     </p>
+     <div class="overview">
+      <table class="overview_table">
+       <tr>
+        <th>Path</th><th>Description</th>
+       </tr>
+       <tr>
+        <td><code>infos.Header</code></td><td>Include all SWF Header information like Version, Filesize, Compress, Dimension</td>
+       </tr>
+       <tr>
+        <td><code>infos.FileAttributes</code></td><td>Include all the FileAttributes information like ActionScript3, Metadata.</td>
+       </tr>
+       <tr>
+        <td><code>infos.Metadata</code></td><td>Include all Metadata like Creator, CreatorTool, CreationDate.</td>
+       </tr>
+       <tr>
+        <td><code>infos.BackgroundColor</code></td><td>Include only the BackgroundColor in the RGB Format.</td>
+       </tr>
+       <tr>
+        <td><code>infos.ScriptLimits</code></td><td>Include all ScriptLimits information like MaxRecursionDepth and ScriptTimeoutSeconds.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs</code></td><td>Include all TAGs from the SWF file in a special format.</td>
+       </tr>
+      </table>
+     </div>
+     <h3>Overview over "infos.TAGs" objects</h3>
+     <p>
+      The "infos.TAGs" object include all TAGs from the SWF file in this special format.<br>
+     </p>
+      <table class="overview_table">
+       <tr>
+        <th>Path</th><th>Description</th>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs.index</code></td><td>Small search Index for the most commend SWF Information.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs.NumberOfTAGs</code></td><td>Include the Number of TAGs which was found in the SWF file.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."]</code></td><td>For each TAG there is a unique Object with a ID.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].type</code></td><td>Include the Type ID of the TAG.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].name</code></td><td>Include the name of the Type of the TAG.</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].start</code></td><td>Start Position of the TAG inside the DataArray</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].end</code></td><td>End Position of the TAG inside the DataArray</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].size</code></td><td>Size of the raw data, exclude type header</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].pos</code></td><td>Overall Position of the TAG in the Object</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].raw</code></td><td>Raw data of the TAG, exclude type header</td>
+       </tr>
+       <tr>
+        <td><code>infos.TAGs["ID..."].content</code></td><td>Parsed raw data, depend on the type which information are here.</td>
+       </tr>
+      </table>
+     </div>
+     <div class="overview_name">
+      <a name="constructor"></a><a href="#content" class="overview_back"></a>
+      <h2>Constructor</h2>
+     </div>
+     <h3><code>asSWFbit_Library(Mode:String)</code></h3>
+     <p>
+      This will create the asSWFbit Library object and assign it to a variable, this is needed to access this object later.<br>
+      You can also pass a <i>Mode</i>, where you can define which information you need and which information you didn't need.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+<code>
+/*
+ asSWFbit Library Example from Markus Bordihn (http://markusbordihn.de)
+*/
+
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+
+/* Example without any Mode (Default) */
+var SWF_data = new asSWFbit_Library();
+
+/* Example with Headers only Mode */
+var SWF_data = new asSWFbit_Library("Headers");
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      In this example the variable "SWF_data" will be the asSWFbit Library Object.<br>
+      You can pass modes such "Headers" to decompile only the header information of a SWF file, in the future other modes will be supported as well.<br>
+     </p>
+     <div class="overview_name">
+      <a name="methods"></a><a href="#content" class="overview_back"></a>
+      <h2>Method</h2>
+     </div>
+     <h3><code>parse(_DATA_:ByteArray) : Boolean</code></h3>
+     <p>
+      With the parse method you load and parse the SWF file into the Info Object.<br>
+      The Method will return "true" when it found a valid SWF file, when the SWF file is invalid it will return "false".<br>
+      So you can check of this method if you have loaded a valid SWF file and when yes, you can try to access the SWF information.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>ActionScript Code:</b>
+      <div class="beispiel-code">
+<code>
+/* Define and Load asSWFbit Library */
+import de.markusbordihn.flash.as3.asSWFbit_Library;
+var SWF_data = new asSWFbit_Library();
+
+/* Load SWF file into ByteArray */
+var file:ByteArray = ...; // Could be any ByteArray which has load the SWF file
+
+/* Check for valid SWF file and parse Information */
+if (SWF_data.parse(file)) {
+    ...
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      You should always check first, if you have a valid SWF file before you try to access the information.<br>
+     </p>
+     <div class="overview_name">
+      <a name="objects"></a><a href="#content" class="overview_back"></a>
+      <h2>Objects</h2>
+     </div>
+     <p>
+      The asSWFbit Library store all of the information into Objects so you can easy check if a object is existing and if it has any information stored.<br>
+     </p>
+     <h3><code>infos.Header</code></h3>
+     <p>
+      The "Header" Object store all header information of the SWF file.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.Header = {
+ Signature:   ... // Signature of the SWF file (CWS = compress / FWS = uncompress)
+ Compress:    ... // Indicate if this is a compress or uncompress SWF file
+ Version:     ... // Version of the flash file
+ FileLength:  ... // FileLength of the SWF (uncompress) file
+ FrameSize:   ... // Frame size in twips format
+ {
+  Xmin: ... // x minimum position
+  Xmax: ... // x maximum position
+  Ymin: ... // y minimum position
+  Ymax: ... // y maximum position
+ },
+ Width:       ... // Calculated width of the Frame size in pixel
+ Height:      ... // Calculated height of the Frame size in pixel
+ FrameRate:   ... // Frames per second
+ FrameCount:  ... // Total number of frames
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      The "Width" and the "Height" information are only calculated values of the "FrameSize" Object, there are not stored in the SWF file directly.<br>
+     </p>
+     <h3><code>infos.FileAttributes</code></h3>
+     <p>
+      The "FileAttributes" Object store all file attributes information of the SWF file.<br>
+      This Object is only available for SWF files equal or higher then version 8.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.FileAttributes = {
+ UseDirectBlit: ... // DirectBlit (Hardware Acceleration) will be used
+ UseGPU:        ... // GPU Acceleration will be used
+ HasMetadata:   ... // SWF file has Metadata
+ ActionScript3: ... // SWF file use ActionScript 3
+ UseNetwork:    ... // Local Sandbox can use Network
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      The values of these field are "1" for "true" and "0" for false. Please keep in mind that Hardware Acceleration is only available for flash player 10 and above.<br>
+     </p>
+     <h3><code>infos.Metadata</code></h3>
+     <p>
+      The "Metadata" are only available when the infos.FileAttributes.HasMetadata is true, which should be the case.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.Metadata = {
+ Description : {
+  xmp : { 
+   CreatorTool:  ... // The Tools which create this SWF file
+   CreateDate:   ... // Create date of this SWF file
+   MetadataDate: ... // Create date of the Metadata
+   ModifyDate:   ... // Date of the last modification
+  },
+  dc: {
+   format:      ... // Fileformat, should be only "application/x-shockwave-flash"
+   description: ... // Description of the SWF file
+   creator:     ... // Name of the Creator of the SWF file
+   title:       ... // Title of the SWF file
+   }
+ },
+ raw:           ... // Raw Metadata in XML Format
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      The raw Metadata use namespaces to access the different variables, so you need to know how you can use such namespaces.<br>
+     </p>
+     <h3><code>infos.BackgroundColor</code></h3>
+     <p>
+      Store the BackgroundColor of the SWF file in a RRGGBB format.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.BackgroundColor = ... // Background Color in RRGGBB format
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      It could be that future versions are store the BackgroundColor in RRGGBB and split in R,G and B.<br>
+     </p>
+     <h3><code>infos.ScriptLimits</code></h3>
+     <p>
+      Store the ScriptLimits Information of the SWF file.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.ScriptLimits = {
+ MaxRecursionDepth:    ... // Maximum of recursion of the ActionScript
+ ScriptTimeoutSeconds: ... // Display a warning message when the ActionScript is above this limit
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      These Information are only available when the SWF file don't use the default values.<br>
+     </p>
+     <h3><code>infos.TAGs</code></h3>
+     <p>
+      The <b>infos.TAGs</b> is a very important object, it store all TAGs from the SWF file in parse and raw format.<br>
+      For each TAG there will be a unique identifier, so you can easy access any of these TAGs individual.<br>
+     </p>
+     <div class="beispiel-box">
+     <b>Structure:</b>
+      <div class="beispiel-code">
+<code>
+infos.TAGs = {
+ index:             ... // Small Search Index for important information
+ NumberOfTAGs:      ... // Save Number of TAGs for a faster access
+ "ID[Position]": {  ... // Example Entry for for a TAG each TAG has a unique ID
+  type:             ... // Tag Type (Number)
+  name:             ... // Parsed Tag Type Name (String)
+  start:            ... // Start Position of the DATA
+  end:              ... // End Position of the DATA
+  size:             ... // Size of the information (not include RECORDHEADER)
+  pos:              ... // General Position of all TAGs
+  raw:              ... // Raw Content of the DATA
+  content:          ... // Parsed Information of the TAG when possible / available
+ }
+}
+</code>
+      </div>
+     </div>
+     <p class="hinweis">
+      You can always access the raw content of any TAG even when there is no parser implemented for this type of TAG.<br>
+      The parsed Information depend on the Tag Type, so for e.g: in the "BackgroundColor" TAG you will only found the BackgroundColor information.<br>
+      When you need to check all TAGs, you can create a loop which use the "NumberOfTAGs" information for the numbers of TAGs which needs to be checked.<br>
+      In the Example section there is also a example of such a loop, to display all TAGs.<br>
+     </p>
+    </div>
+   </div>
+   <!-- / Seiten Inhalt -->
+ </body>
+</html>

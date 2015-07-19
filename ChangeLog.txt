@@ -1,0 +1,13 @@
+asSWFbit_Library v0.2 - a ActionScript based SWF Decompiler / Compiler (by Markus Bordihn)
+===========================================================================================
+Please visited also http://flash.area-network.de
+
+0.2  First Release Version
+This Version can only read the Header Informations and the TAGs, but it will not parse all TAGs.
+The ActionScript Decoder was not include in this Version a limited Versions will be released in the next Version.
+
+0.1c Include TAGs Names and experimental ActionScript Decoder
+
+0.1b Optimized Code and include comments for a better understanding of the Code
+
+0.1a Internal Test Version which can read out Header Informations
